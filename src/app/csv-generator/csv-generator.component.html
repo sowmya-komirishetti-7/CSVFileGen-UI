@@ -1,0 +1,71 @@
+<!-- <h2>Select Headers</h2>
+<div *ngFor="let header of headers">
+    <input type="checkbox" [value]="header" 
+    [checked]="selectedHeaders.includes(header)" 
+    (change)="onCheckboxChange($event)" /> {{ header}}
+</div>
+<button (click)="generateCsv()">Generate CSV</button> -->
+
+<!-- 
+<h2>Select Headers</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Header Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let header of headers">
+      <td>
+        <input 
+          type="checkbox" 
+          [value]="header" 
+          [checked]="selectedHeaders.includes(header)" 
+          (change)="onCheckboxChange($event, header)" />
+      </td>
+      <td>{{ header }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br /> -->
+
+<!-- <button (click)="generateCsv()">Generate CSV</button> -->
+
+
+
+
+
+
+<!-- <h2>Select Headers</h2>
+<div *ngFor="let header of headers">
+    <input type="checkbox" [value]="header" 
+    [checked]="selectedHeaders.includes(header)" 
+    (change)="onCheckboxChange($event, header)" /> {{ header }}
+</div>
+<button (click)="generateCsv()">Generate CSV</button>
+
+<h2>Generated Table</h2>
+<table border="1" *ngIf="tableData.length > 0">
+  <tr>
+    <th *ngFor="let header of tableData[0]">{{ header }}</th>
+  </tr>
+  <tr *ngFor="let row of tableData.slice(1)">
+    <td *ngFor="let cell of row">{{ cell }}</td>
+  </tr>
+</table> -->
+
+<div class="container">
+<h2>Select Headers</h2>
+<mat-form-field appearance="outline">
+  <mat-label>Select Headers</mat-label>
+  <mat-select multiple [(value)]="selectedHeaders">
+    <mat-option *ngFor="let header of headers" [value]="header">{{ header }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button (click)="loadData()">Load Data</button>
+
+<button *ngIf="dataLoad" (click)="generateCsv()">Download CSV</button>
+</div>

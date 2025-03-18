@@ -1,0 +1,49 @@
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+mat-form-field {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 10px auto;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: block;
+    margin: 15px auto;
+    width: 250px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+
+}
+
+button[disabled] {
+    background-color: #d12626;
+    cursor: not-allowed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 20px;
+}
